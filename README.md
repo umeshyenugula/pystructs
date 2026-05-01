@@ -1,1 +1,1 @@
-# Python-DSA-Collections
+# Pystruct
