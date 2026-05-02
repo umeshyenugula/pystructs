@@ -1,4 +1,4 @@
-# pystructs
+# pystructs-toolkit
 
 **A production-grade, typed alternative to Python's `collections` module.**
 
