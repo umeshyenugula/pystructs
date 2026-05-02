@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pystructs-toolkit"
+version = "0.9.1"
+description = "Production-grade data structures and algorithms — a modern alternative to Python's collections"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = [
+    "data-structures", "algorithms", "collections", "python",
+    "heap", "trie", "graph", "treemap", "linkedhashmap",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.4"]
+
+[project.scripts]
+pystructs = "pystructs.cli.main:main"
+
+[project.urls]
+Repository = "https://github.com/umeshyenugula/pystructs"
+Documentation = "https://github.com/umeshyenugula/pystructs#readme"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pystructs*"]
+
+[tool.setuptools.package-data]
+pystructs = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short --cov=pystructs --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["pystructs"]
+omit = ["tests/*", "examples/*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
