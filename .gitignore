@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+test_env/
+venv/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+
+# Secrets
+.pypirc
+.env
