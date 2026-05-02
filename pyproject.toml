@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pystructs-toolkit"
-version = "0.9.1"
+version = "0.9.3"
 description = "Production-grade data structures and algorithms — a modern alternative to Python's collections"
 readme = "README.md"
 requires-python = ">=3.10"
